@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import github from '../images/github-logo.png';
+import shoppingCart from '../images/shopping-cart.png';
 function Header() {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
@@ -38,6 +39,9 @@ function Header() {
         </ul>
       </div>
       <div className="empty">
+        <div className="cart--container">
+          <img className="cart" src={shoppingCart} alt="cart-icon" />
+        </div>
         <div className="burger--container" onClick={toggleBurger}>
           <div className="burger--button"></div>
         </div>
