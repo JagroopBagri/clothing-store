@@ -33,16 +33,16 @@ function Header() {
         </div>
         <ul className="links">
           <li>
-            <p>Home</p>
+            <a href="/">Home</a>
           </li>
           <li>
-            <p>Women</p>
+            <a href="/women">Women</a>
           </li>
           <li>
-            <p>Men</p>
+            <a href="/men">Men</a>
           </li>
           <li>
-            <p>About</p>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>

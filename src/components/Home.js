@@ -19,13 +19,14 @@ function Home() {
     }
   };
   return (
-    <>
+    <div className="home--page">
       {loadVideo()}
+
       <section className="season--container">
         <button className="season">SS22 Collection</button>
         <button className="season">FW22 Collection</button>
       </section>
-    </>
+    </div>
   );
 }
 
