@@ -27,33 +27,29 @@ code {
   width: 100%;
 }
 .App {
-  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.home--page {
-  position: absolute;
-  z-index: -1;
+.Home--Page {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background-image: url('./images/background.png');
-  background-size: 1150px 800px;
+  background-image: url(./images/background.png);
+  background-size: 1125px 915px;
 }
 /* Header */
 .header {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 25%;
+  height: 17%;
   transition: all 0.4s ease-in-out;
 }
 .header:hover {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgb(0, 0, 0);
 }
 .middle {
   display: flex;
@@ -183,8 +179,13 @@ h1 {
   color: white;
   font-size: 1.3rem;
   transition: all 0.1s ease-in-out;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
+
 .season:hover {
   background-color: rgb(57, 9, 9);
   border-color: rgb(57, 9, 9);
@@ -192,11 +193,35 @@ h1 {
 .cart--container {
   display: none;
 }
+
+/* Womens Page */
+
+.women--page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url('./images/clothing/female/female-model.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.female--model {
+  height: 50%;
+  width: 100%;
+}
+video {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  object-fit: cover;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 @media only screen and (min-width: 550px) {
-  body {
-    background-image: url(./images/backup-image.png);
-    background-size: 100% 100%;
-  }
   .burger--container {
     display: none;
   }
@@ -226,20 +251,12 @@ h1 {
     font-size: 1.3rem;
     margin-bottom: 30px;
   }
-  .home--page {
+  .Home--Page {
     background-image: none;
     background-size: auto;
   }
-}
-
-video {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  object-fit: cover;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  .female--model {
+    height: 80%;
+    width: 100%;
+  }
 }

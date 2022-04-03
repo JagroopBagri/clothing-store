@@ -1,6 +1,7 @@
 import React from 'react';
 import video from '../video/video3.mp4';
 import backupPicture from '../images/backup-image.png';
+import Header from '../components/Header';
 function Home() {
   const loadVideo = () => {
     if (window.innerWidth > 549) {
@@ -19,12 +20,16 @@ function Home() {
     }
   };
   return (
-    <div className="home--page">
+    <div className="Home--Page">
+      <Header></Header>
       {loadVideo()}
-
       <section className="season--container">
-        <button className="season">SS22 Collection</button>
-        <button className="season">FW22 Collection</button>
+        <a className="season" href="/women">
+          WF22 Collection
+        </a>
+        <a className="season" href="/men">
+          MF22 Collection
+        </a>
       </section>
     </div>
   );

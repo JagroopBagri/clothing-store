@@ -1,13 +1,13 @@
-import Header from './components/Header';
-import Home from './components/Home';
+import Home from './pages/Home';
+import Women from './pages/Women';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header></Header>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/women" element={<Women></Women>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
