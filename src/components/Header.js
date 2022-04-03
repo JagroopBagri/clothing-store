@@ -3,9 +3,9 @@ import github from '../images/github-logo.png';
 function Header() {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
-  let burgerContainer = document.querySelector('.burger--container');
   const toggleBurger = () => {
-    if (burgerOpen) {
+    let burgerContainer = document.querySelector('.burger--container');
+    if (burgerOpen === true) {
       burgerContainer.classList.remove('open');
       setBurgerOpen(false);
     } else {
