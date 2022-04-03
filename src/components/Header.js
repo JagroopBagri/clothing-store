@@ -32,10 +32,18 @@ function Header() {
           <h1>Narsiing</h1>
         </div>
         <ul className="links">
-          <li>Home</li>
-          <li>Women</li>
-          <li>Men</li>
-          <li>About</li>
+          <li>
+            <p>Home</p>
+          </li>
+          <li>
+            <p>Women</p>
+          </li>
+          <li>
+            <p>Men</p>
+          </li>
+          <li>
+            <p>About</p>
+          </li>
         </ul>
       </div>
       <div className="empty">
