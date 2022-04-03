@@ -5,6 +5,9 @@ function Women() {
   return (
     <div className="women--page">
       <Header></Header>
+      <div className="women--container">
+        <p>Women's</p>
+      </div>
     </div>
   );
 }
