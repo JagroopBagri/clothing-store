@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import github from '../images/github-logo.png';
 function Header() {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
@@ -15,7 +15,17 @@ function Header() {
   };
   return (
     <section className="header">
-      <div className="empty"></div>
+      <div className="empty">
+        <a
+          className="name"
+          href="https://github.com/JagroopBagri"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img className="github--logo" src={github} alt="github-logo" />
+          <p>Jagroop Bagri</p>
+        </a>
+      </div>
       <div className="middle">
         <div className="title">
           <h1>Narsiing</h1>
