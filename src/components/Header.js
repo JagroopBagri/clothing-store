@@ -14,17 +14,25 @@ function Header() {
     }
   };
   return (
-    <div className="header">
+    <section className="header">
       <div className="empty"></div>
-      <div className="title">
-        <h1>Narsiing</h1>
+      <div className="middle">
+        <div className="title">
+          <h1>Narsiing</h1>
+        </div>
+        <ul className="links">
+          <li>Home</li>
+          <li>Women</li>
+          <li>Men</li>
+          <li>About</li>
+        </ul>
       </div>
       <div className="empty">
         <div className="burger--container" onClick={toggleBurger}>
           <div className="burger--button"></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
