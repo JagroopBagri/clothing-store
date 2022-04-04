@@ -60,8 +60,7 @@ function Men() {
       image: belt,
       gender: 'male',
       price: '$2080',
-      description:
-        'Belt buckle in brushed palladium plated metal. With its ingenuous mecanism, this buckle can fit 32 mm and 38 mm leatherstraps. ',
+      description: 'Belt buckle in brushed palladium plated metal.',
       id: 'M5',
     },
     {
@@ -69,8 +68,7 @@ function Men() {
       image: hoodie,
       gender: 'male',
       price: '$150',
-      description:
-        'The classic Essentials hoodie sweatshirt is updated with a flocked logo treatment inspired by vintage athletic wear.',
+      description: 'Premium hoodie in 100% organic cotton',
       id: 'M6',
     },
     {
@@ -79,28 +77,19 @@ function Men() {
       gender: 'male',
       price: '$1900',
       description:
-        'In a classic wide camp collar shape, this shirt boats a range of colors accompined with stunning designs. (100% silk)',
+        'This shirt boats a range of colors accompined with stunning designs. (100% silk)',
       id: 'M7',
     }
   );
-  const [display, setDisplay] = useState({ display: 'none' });
-  const toggleDisplay = () => {
-    if (display === { display: 'none' }) {
-      setDisplay({ display: 'block' });
-    } else {
-      setDisplay({ display: 'none' });
-    }
-  };
+
   const Clothe = menClotheArray.map((item) => {
     return (
       <Item
-        display={display}
         image={item.image}
         title={item.title}
         price={item.price}
         description={item.description}
         key={item.id}
-        func={toggleDisplay}
       ></Item>
     );
   });

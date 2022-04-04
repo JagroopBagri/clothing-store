@@ -14,12 +14,12 @@ function Women() {
   let womenClotheArray = [];
   womenClotheArray.push(
     {
-      title: 'Embroidered Zodiac Shawl',
+      title: 'Zodiac Shawl',
       image: zodiacShawl,
       gender: 'female',
       price: '$5500',
       description:
-        'Shawl in cashmere and silk with hand-rolled edges and hand-embroidered with fine beads and multicolor glass rods (70% cashmere, 30% silk).',
+        'Hand-embroidered with fine beads and multicolor glass rods (70% cashmere, 30% silk).',
       id: 'F0',
     },
     {
@@ -84,24 +84,15 @@ function Women() {
       id: 'F7',
     }
   );
-  const [display, setDisplay] = useState({ display: 'none' });
-  const toggleDisplay = () => {
-    if (display === { display: 'none' }) {
-      setDisplay({ display: 'block' });
-    } else {
-      setDisplay({ display: 'none' });
-    }
-  };
+
   const Clothe = womenClotheArray.map((item) => {
     return (
       <Item
-        display={display}
         image={item.image}
         title={item.title}
         price={item.price}
         description={item.description}
         key={item.id}
-        func={toggleDisplay}
       ></Item>
     );
   });
