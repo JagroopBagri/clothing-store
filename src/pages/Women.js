@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
-import femaleModel from '../images/clothing/female/female-model.jpg';
+import Item from '../components/Item';
+
 function Women() {
   return (
     <div className="women--page">
@@ -8,6 +9,7 @@ function Women() {
       <div className="women--container">
         <p>Women's</p>
       </div>
+      <Item></Item>
     </div>
   );
 }
