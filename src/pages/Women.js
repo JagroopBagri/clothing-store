@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Header from '../components/Header';
 import Item from '../components/Item';
 import zodiacShawl from '../images/clothing/female/zodiac-shawl.png';
@@ -83,14 +84,24 @@ function Women() {
       id: 'F7',
     }
   );
+  const [display, setDisplay] = useState({ display: 'none' });
+  const toggleDisplay = () => {
+    if (display === { display: 'none' }) {
+      setDisplay({ display: 'block' });
+    } else {
+      setDisplay({ display: 'none' });
+    }
+  };
   const Clothe = womenClotheArray.map((item) => {
     return (
       <Item
+        display={display}
         image={item.image}
         title={item.title}
         price={item.price}
         description={item.description}
         key={item.id}
+        func={toggleDisplay}
       ></Item>
     );
   });

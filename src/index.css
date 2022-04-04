@@ -241,6 +241,40 @@ video {
   letter-spacing: 5px;
 }
 
+/* Mens Page */
+
+.men--page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(5, 5, 5);
+  background-image: url('./images/clothing/male/male-model.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 120px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.male--model {
+  height: 50%;
+  width: 100%;
+}
+.men--container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.men--container p {
+  font-size: 2.4rem;
+  font-family: Cochin, Times, 'Times New Roman', serif;
+  letter-spacing: 5px;
+}
+
 /* items component */
 .item--preview--container {
   display: flex;
@@ -257,6 +291,7 @@ video {
   justify-content: flex-end;
   width: 50%;
   height: 50%;
+  cursor: pointer;
 }
 .item--box {
   background-color: rgba(0, 0, 0, 0.75);
@@ -343,11 +378,17 @@ video {
     height: 80%;
     width: 100%;
   }
+  .male--model {
+    height: 80%;
+    width: 100%;
+  }
   .item--preview--container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     height: 25%;
+    top: 90px;
   }
   .item--preview {
     width: 50%;
@@ -369,7 +410,8 @@ video {
   .item--preview--container {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 55%;
     height: 50%;
+    top: 192px;
   }
 }

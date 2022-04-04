@@ -9,8 +9,9 @@ function Item(props) {
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
       }}
+      onMouseOver={props.func}
     >
-      <div className="item--box">
+      <div className="item--box" style={props.display}>
         <div className="item--detail--container">
           <p className="item--name">{props.title}</p>
           <p className="item--price">{props.price}</p>
