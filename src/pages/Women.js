@@ -8,6 +8,7 @@ import amoreSandal from '../images/clothing/female/amore-sandal.png';
 import santoriniSandal from '../images/clothing/female/santorini-sandal.png';
 import zipup from '../images/clothing/female/half-zipup.png';
 import cardigan from '../images/clothing/female/sage-cardigan.png';
+import belt from '../images/clothing/female/anneaux-belt.png';
 function Women() {
   let womenClotheArray = [];
   womenClotheArray.push(
@@ -52,9 +53,16 @@ function Women() {
       image: santoriniSandal,
       gender: 'female',
       price: '$1525',
-      description:
-        'Sandal in unique plant-based leather with straight cut edges.',
+      description: 'Sandal in unique plant-based leather with rounded edges.',
       id: 'F4',
+    },
+    {
+      title: 'Anneaux Belt',
+      image: belt,
+      gender: 'female',
+      price: '$2875',
+      description: 'Plant-based belt in with gold plated buckle and rings. ',
+      id: 'F5',
     },
     {
       title: '1/2 Zip Pullover',
@@ -63,7 +71,7 @@ function Women() {
       price: '$150',
       description:
         'The 1/2 zip pullover is designed in the signature Essentials fleece to provide depth and comfort.',
-      id: 'F5',
+      id: 'F6',
     },
     {
       title: 'Cardigan',
@@ -72,17 +80,27 @@ function Women() {
       price: '$165',
       description:
         'The full-zip cardigan is elevated in a sweater knit to provide appealing softness, body, and texture.',
-      id: 'F6',
+      id: 'F7',
     }
   );
-  console.log(womenClotheArray);
+  const Clothe = womenClotheArray.map((item) => {
+    return (
+      <Item
+        image={item.image}
+        title={item.title}
+        price={item.price}
+        description={item.description}
+        key={item.id}
+      ></Item>
+    );
+  });
   return (
     <div className="women--page">
       <Header></Header>
       <div className="women--container">
         <p>Women's</p>
       </div>
-      <Item></Item>
+      <div className="item--preview--container">{Clothe}</div>
     </div>
   );
 }

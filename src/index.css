@@ -268,12 +268,12 @@ video {
   height: 90%;
   width: 90%;
   gap: 4px;
+  line-height: 15px;
 }
 .item--name {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 90%;
   height: 20%;
   font-size: 0.7rem;
@@ -282,7 +282,6 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 90%;
   height: 15%;
   font-size: 0.7rem;
