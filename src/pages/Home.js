@@ -1,5 +1,5 @@
 import React from 'react';
-import video from '../video/video3.mp4';
+import video from '../video/blue-smoke.mp4';
 import backupPicture from '../images/backup-image.png';
 import Header from '../components/Header';
 function Home() {
