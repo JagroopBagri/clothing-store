@@ -317,7 +317,7 @@ video {
 }
 
 /* Shopping Cart Page */
-.cart--page {
+.shopping--cart--page {
   display: flex;
   flex-direction: column;
   background-color: rgb(5, 5, 5);
@@ -325,7 +325,7 @@ video {
   width: 100%;
   align-items: center;
 }
-.cart--title--container {
+.shopping--cart--title--container {
   width: 100%;
   height: 20%;
   min-height: 150px;
@@ -333,10 +333,34 @@ video {
   justify-content: center;
   align-items: center;
 }
-.cart--title--container p {
+.shopping--cart--title--container p {
   font-size: 2.4rem;
   font-family: Cochin, Times, 'Times New Roman', serif;
   letter-spacing: 5px;
+}
+.shopping--cart--container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  max-width: 650px;
+  height: 18%;
+  border-style: solid;
+  padding: 1%;
+}
+.shopping--cart--container img {
+  height: 70%;
+}
+.shopping--cart--info {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.shopping--cart--name {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 /* items component */
 .item--preview--container {
@@ -493,6 +517,15 @@ input {
   .item--description {
     font-size: 1rem;
     line-height: 40px;
+  }
+  .shopping--cart--container {
+    height: 25%;
+  }
+  .shopping--cart--container img {
+    height: 85%;
+  }
+  .shopping--cart--info {
+    height: 85%;
   }
 }
 @media only screen and (min-width: 1200px) {
