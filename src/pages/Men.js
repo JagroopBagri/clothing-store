@@ -59,7 +59,7 @@ function Men() {
       image: belt,
       gender: 'male',
       price: '$2080',
-      description: 'Belt buckle in brushed palladium plated metal.',
+      description: 'Belt buckle in brushed palladium plated metal',
       id: 'M5',
     },
     {
@@ -76,7 +76,7 @@ function Men() {
       gender: 'male',
       price: '$1900',
       description:
-        'This shirt boats a range of colors accompined with stunning designs. (100% silk)',
+        'This shirt boats a range of colors accompanied with stunning designs (100% silk)',
       id: 'M7',
     }
   );

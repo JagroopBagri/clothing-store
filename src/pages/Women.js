@@ -18,7 +18,7 @@ function Women() {
       gender: 'female',
       price: '$5500',
       description:
-        'Hand-embroidered with fine beads and multicolor glass rods (70% cashmere, 30% silk).',
+        'Hand-embroidered with fine beads and multicolor glass rods (70% cashmere, 30% silk)',
       id: 'F0',
     },
     {
@@ -27,7 +27,7 @@ function Women() {
       gender: 'female',
       price: '$1200',
       description:
-        'Shawl in cashmere and silk with hand-rolled edges (70% cashmere, 30% silk).',
+        'Shawl in cashmere and silk with hand-rolled edges (70% cashmere, 30% silk)',
       id: 'F1',
     },
     {
@@ -36,7 +36,7 @@ function Women() {
       gender: 'female',
       price: '$1200',
       description:
-        'Shawl in cashmere and silk with hand-rolled edges (70% cashmere, 30% silk).',
+        'Shawl in cashmere and silk with hand-rolled edges (70% cashmere, 30% silk)',
       id: 'F2',
     },
     {
@@ -45,7 +45,7 @@ function Women() {
       gender: 'female',
       price: '$630',
       description:
-        'Sandal in unique plant-based leather with straight cut edges.',
+        'Sandal in unique plant-based leather with straight cut edges',
       id: 'F3',
     },
     {
@@ -53,7 +53,7 @@ function Women() {
       image: santoriniSandal,
       gender: 'female',
       price: '$1525',
-      description: 'Sandal in unique plant-based leather with rounded edges.',
+      description: 'Sandal in unique plant-based leather with rounded edges',
       id: 'F4',
     },
     {
@@ -61,7 +61,7 @@ function Women() {
       image: belt,
       gender: 'female',
       price: '$2875',
-      description: 'Plant-based belt in with gold plated buckle and rings. ',
+      description: 'Plant-based belt in with gold plated buckle and rings ',
       id: 'F5',
     },
     {
@@ -70,7 +70,7 @@ function Women() {
       gender: 'female',
       price: '$150',
       description:
-        'The 1/2 zip pullover is designed in the signature Essentials fleece to provide depth and comfort.',
+        'The 1/2 zip pullover is designed in the signature Essentials fleece to provide depth and comfort',
       id: 'F6',
     },
     {
@@ -79,7 +79,7 @@ function Women() {
       gender: 'female',
       price: '$165',
       description:
-        'The full-zip cardigan is elevated in a sweater knit to provide appealing softness, body, and texture.',
+        'The full-zip cardigan is elevated in a sweater knit to provide appealing softness, body, and texture',
       id: 'F7',
     }
   );
