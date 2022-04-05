@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import Header from '../components/Header';
 import Item from '../components/Item';
 import blueScarf from '../images/clothing/male/surreal-scarf-blue.png';

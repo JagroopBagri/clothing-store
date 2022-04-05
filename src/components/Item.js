@@ -1,15 +1,25 @@
-import React from 'react';
-import zodiacShawl from '../images/clothing/female/zodiac-shawl.png';
+import React, { useState } from 'react';
+
 function Item(props) {
+  const [quantity, setQuantity] = useState(0);
+  const changeQuantity = (e) => {
+    setQuantity(e.target.value);
+  };
   return (
-    <div className="item--preview" onMouseEnter={props.func}>
+    <div className="item--preview">
       <img className="clothing--item" src={props.image} alt={props.title} />
       <p className="item--name">{props.title}</p>
       <p className="item--price">{props.price}</p>
       <p className="item--description">{props.description}</p>
       <div className="buying--container">
         <button className="purchase">Add to Cart</button>
-        <input type="text" />
+        <input
+          type="number"
+          min="0"
+          max="99"
+          value={quantity}
+          onChange={changeQuantity}
+        />
       </div>
     </div>
   );
