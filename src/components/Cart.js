@@ -9,7 +9,7 @@ function Cart(props) {
         <p className="shopping--cart--price">{props.price}</p>
         <p className="shopping--cart--remove">Remove</p>
       </div>
-      <input type="number" min="0" max="99" />
+      <input type="number" min="0" max="99" value={props.quantity} />
     </div>
   );
 }
