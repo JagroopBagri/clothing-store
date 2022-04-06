@@ -362,6 +362,10 @@ video {
   font-size: 1.2rem;
   font-weight: bold;
 }
+.shopping--cart--remove {
+  color: rgb(255, 123, 123);
+  cursor: pointer;
+}
 /* items component */
 .item--preview--container {
   padding: 5px;

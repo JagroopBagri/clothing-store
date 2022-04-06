@@ -48,7 +48,9 @@ function Header() {
       </div>
       <div className="empty">
         <div className="cart--container">
-          <img className="cart" src={shoppingCart} alt="cart-icon" />
+          <a href="/shopping-cart">
+            <img className="cart" src={shoppingCart} alt="cart-icon" />
+          </a>
         </div>
         <div className="burger--container" onClick={toggleBurger}>
           <div className="burger--button"></div>

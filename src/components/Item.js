@@ -12,7 +12,9 @@ function Item(props) {
       <p className="item--price">{props.price}</p>
       <p className="item--description">{props.description}</p>
       <div className="buying--container">
-        <button className="purchase">Add to Cart</button>
+        <button className="purchase" onClick={props.cartFunc}>
+          Add to Cart
+        </button>
         <input
           type="number"
           min="0"
