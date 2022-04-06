@@ -1,5 +1,5 @@
 import React from 'react';
-import blueScarf from '../images/clothing/male/surreal-scarf-blue.png';
+
 function Cart(props) {
   return (
     <div className="shopping--cart--container">

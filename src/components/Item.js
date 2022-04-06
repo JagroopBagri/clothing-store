@@ -12,7 +12,12 @@ function Item(props) {
       <p className="item--price">{props.price}</p>
       <p className="item--description">{props.description}</p>
       <div className="buying--container">
-        <button className="purchase" onClick={props.cartFunc}>
+        <button
+          className="purchase"
+          onClick={() => {
+            props.cartFunc(props.image, props.title, props.price, quantity);
+          }}
+        >
           Add to Cart
         </button>
         <input
