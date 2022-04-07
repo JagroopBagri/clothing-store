@@ -3,7 +3,18 @@ import React, { useState } from 'react';
 function Item(props) {
   const [quantity, setQuantity] = useState(0);
   const changeQuantity = (e) => {
-    setQuantity(e.target.value);
+    let twoDigit;
+    if (e.target.value < 100) {
+      setQuantity(e.target.value);
+    } else {
+      let stringNum = String(e.target.value);
+      if (stringNum[0] == 0) {
+        twoDigit = stringNum[1] + stringNum[2];
+      } else {
+        twoDigit = stringNum[0] + stringNum[1];
+      }
+      setQuantity(Number(twoDigit));
+    }
   };
   return (
     <div className="item--preview">
