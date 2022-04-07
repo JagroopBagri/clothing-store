@@ -21,7 +21,10 @@ function Home(props) {
   };
   return (
     <div className="Home--Page">
-      <Header cartNotif={props.cartNotif}></Header>
+      <Header
+        cartNotif={props.cartNotif}
+        cartQuantity={props.cartQuantity}
+      ></Header>
       {loadVideo()}
       <section className="season--container">
         <a className="season" href="/women">

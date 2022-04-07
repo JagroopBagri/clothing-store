@@ -17,13 +17,22 @@ function App() {
   localStorage.setItem('cart-inventory', JSON.stringify(cartItems));
   const displayCartNotif = () => {
     if (JSON.stringify(cartItems) !== JSON.stringify([])) {
-      return { display: 'block' };
+      return { display: 'flex' };
     } else {
       return { display: 'none' };
     }
   };
-  console.log(cartItems);
-  console.log(displayCartNotif());
+  const getCartQuantity = () => {
+    let totalQuantity = 0;
+    cartItems.forEach((item) => {
+      totalQuantity = totalQuantity + Number(item.quantity);
+    });
+    if (totalQuantity < 100) {
+      return totalQuantity;
+    } else {
+      return '99+';
+    }
+  };
   const updateCart = (image, name, price, quantity) => {
     if (quantity > 0) {
       setCartItems(() => {
@@ -58,7 +67,12 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home cartNotif={displayCartNotif()}></Home>}
+            element={
+              <Home
+                cartNotif={displayCartNotif()}
+                cartQuantity={getCartQuantity()}
+              ></Home>
+            }
           ></Route>
           <Route
             path="/women"
@@ -66,18 +80,28 @@ function App() {
               <Women
                 cartFunc={updateCart}
                 cartNotif={displayCartNotif()}
+                cartQuantity={getCartQuantity()}
               ></Women>
             }
           ></Route>
           <Route
             path="/men"
             element={
-              <Men cartFunc={updateCart} cartNotif={displayCartNotif()}></Men>
+              <Men
+                cartFunc={updateCart}
+                cartNotif={displayCartNotif()}
+                cartQuantity={getCartQuantity()}
+              ></Men>
             }
           ></Route>
           <Route
             path="/about"
-            element={<About cartNotif={displayCartNotif()}></About>}
+            element={
+              <About
+                cartNotif={displayCartNotif()}
+                cartQuantity={getCartQuantity()}
+              ></About>
+            }
           ></Route>
           <Route
             path="/shopping-cart"
@@ -85,6 +109,7 @@ function App() {
               <ShoppingCart
                 cart={currentCart}
                 cartNotif={displayCartNotif()}
+                cartQuantity={getCartQuantity()}
               ></ShoppingCart>
             }
           ></Route>

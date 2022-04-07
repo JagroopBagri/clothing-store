@@ -4,7 +4,10 @@ import Header from '../components/Header';
 function About(props) {
   return (
     <div className="About--page">
-      <Header cartNotif={props.cartNotif}></Header>
+      <Header
+        cartNotif={props.cartNotif}
+        cartQuantity={props.cartQuantity}
+      ></Header>
       <div className="about--container">
         <p>About</p>
       </div>

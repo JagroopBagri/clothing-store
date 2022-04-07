@@ -51,7 +51,9 @@ function Header(props) {
           <a href="/shopping-cart">
             <img className="cart" src={shoppingCart} alt="cart-icon" />
           </a>
-          <div className="cart--quantity" style={props.cartNotif}></div>
+          <div className="cart--quantity" style={props.cartNotif}>
+            {props.cartQuantity}
+          </div>
         </div>
         <div className="burger--container" onClick={toggleBurger}>
           <div className="burger--button"></div>

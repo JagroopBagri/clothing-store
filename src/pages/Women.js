@@ -18,7 +18,10 @@ function Women(props) {
   });
   return (
     <div className="women--page">
-      <Header cartNotif={props.cartNotif}></Header>
+      <Header
+        cartNotif={props.cartNotif}
+        cartQuantity={props.cartQuantity}
+      ></Header>
       <div className="women--container">
         <p>Women's</p>
       </div>
