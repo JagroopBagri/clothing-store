@@ -17,7 +17,7 @@ function Men(props) {
   });
   return (
     <div className="men--page">
-      <Header></Header>
+      <Header cartNotif={props.cartNotif}></Header>
       <div className="men--container">
         <p>Men's</p>
       </div>

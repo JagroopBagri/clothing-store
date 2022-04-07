@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
 
-function About() {
+function About(props) {
   return (
     <div className="About--page">
-      <Header></Header>
+      <Header cartNotif={props.cartNotif}></Header>
       <div className="about--container">
         <p>About</p>
       </div>

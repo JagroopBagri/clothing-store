@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import github from '../images/github-logo.png';
 import shoppingCart from '../images/shopping-cart.png';
-function Header() {
+function Header(props) {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   const toggleBurger = () => {
@@ -51,6 +51,7 @@ function Header() {
           <a href="/shopping-cart">
             <img className="cart" src={shoppingCart} alt="cart-icon" />
           </a>
+          <div className="cart--quantity" style={props.cartNotif}></div>
         </div>
         <div className="burger--container" onClick={toggleBurger}>
           <div className="burger--button"></div>

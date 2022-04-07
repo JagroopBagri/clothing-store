@@ -15,16 +15,15 @@ function App() {
     }
   });
   localStorage.setItem('cart-inventory', JSON.stringify(cartItems));
-  /*
-  let storageCart = JSON.parse(localStorage.getItem('cart-inventory'));
-
-  if (
-    storageCart &&
-    JSON.stringify(storageCart) !== JSON.stringify(cartItems)
-  ) {
-    setCartItems(storageCart);
-  }
-*/
+  const displayCartNotif = () => {
+    if (JSON.stringify(cartItems) !== JSON.stringify([])) {
+      return { display: 'block' };
+    } else {
+      return { display: 'none' };
+    }
+  };
+  console.log(cartItems);
+  console.log(displayCartNotif());
   const updateCart = (image, name, price, quantity) => {
     if (quantity > 0) {
       setCartItems(() => {
@@ -57,19 +56,37 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
+          <Route
+            path="/"
+            element={<Home cartNotif={displayCartNotif()}></Home>}
+          ></Route>
           <Route
             path="/women"
-            element={<Women cartFunc={updateCart}></Women>}
+            element={
+              <Women
+                cartFunc={updateCart}
+                cartNotif={displayCartNotif()}
+              ></Women>
+            }
           ></Route>
           <Route
             path="/men"
-            element={<Men cartFunc={updateCart}></Men>}
+            element={
+              <Men cartFunc={updateCart} cartNotif={displayCartNotif()}></Men>
+            }
           ></Route>
-          <Route path="/about" element={<About></About>}></Route>
+          <Route
+            path="/about"
+            element={<About cartNotif={displayCartNotif()}></About>}
+          ></Route>
           <Route
             path="/shopping-cart"
-            element={<ShoppingCart cart={currentCart}></ShoppingCart>}
+            element={
+              <ShoppingCart
+                cart={currentCart}
+                cartNotif={displayCartNotif()}
+              ></ShoppingCart>
+            }
           ></Route>
         </Routes>
       </div>

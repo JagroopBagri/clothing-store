@@ -2,7 +2,7 @@ import React from 'react';
 import video from '../video/blue-smoke.mp4';
 import backupPicture from '../images/backup-image.png';
 import Header from '../components/Header';
-function Home() {
+function Home(props) {
   const loadVideo = () => {
     if (window.innerWidth > 549) {
       return (
@@ -21,7 +21,7 @@ function Home() {
   };
   return (
     <div className="Home--Page">
-      <Header></Header>
+      <Header cartNotif={props.cartNotif}></Header>
       {loadVideo()}
       <section className="season--container">
         <a className="season" href="/women">
