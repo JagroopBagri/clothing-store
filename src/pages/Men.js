@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Item from '../components/Item';
 import { menClotheArray } from '../inventory/inventory';
-function Men() {
+function Men(props) {
   const Clothe = menClotheArray.map((item) => {
     return (
       <Item
@@ -11,6 +11,7 @@ function Men() {
         price={item.price}
         description={item.description}
         key={item.id}
+        cartFunc={props.cartFunc}
       ></Item>
     );
   });

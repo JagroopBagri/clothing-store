@@ -62,7 +62,10 @@ function App() {
             path="/women"
             element={<Women cartFunc={updateCart}></Women>}
           ></Route>
-          <Route path="/men" element={<Men></Men>}></Route>
+          <Route
+            path="/men"
+            element={<Men cartFunc={updateCart}></Men>}
+          ></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route
             path="/shopping-cart"
