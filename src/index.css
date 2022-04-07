@@ -349,14 +349,19 @@ video {
   padding: 1%;
 }
 .shopping--cart--container img {
-  height: 70%;
+  height: 60%;
+  padding: 1px;
 }
 .shopping--cart--info {
   height: 70%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+.shopping--cart--quantity {
+  margin-right: 5px;
 }
 .shopping--cart--name {
   font-size: 1.2rem;

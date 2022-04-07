@@ -15,20 +15,29 @@ function App() {
     }
   });
   localStorage.setItem('cart-inventory', JSON.stringify(cartItems));
+  /*
   let storageCart = JSON.parse(localStorage.getItem('cart-inventory'));
-  console.log(cartItems);
-  console.log(storageCart);
+
   if (
     storageCart &&
     JSON.stringify(storageCart) !== JSON.stringify(cartItems)
   ) {
     setCartItems(storageCart);
   }
-
+*/
   const updateCart = (image, name, price, quantity) => {
-    setCartItems(() => {
-      return [...cartItems, { image, name, price, quantity }];
+    if (quantity > 0) {
+      setCartItems(() => {
+        return [...cartItems, { image, name, price, quantity }];
+      });
+    }
+  };
+  const deleteItem = (num) => {
+    const cart = JSON.parse(localStorage.getItem('cart-inventory'));
+    const a = cart.filter((item, index) => {
+      return index !== num;
     });
+    setCartItems(a);
   };
   const currentCart = cartItems.map((item, index) => {
     return (
@@ -38,10 +47,12 @@ function App() {
         price={item.price}
         quantity={item.quantity}
         key={item + index}
+        index={index}
+        delete={deleteItem}
       ></Cart>
     );
   });
-  console.log(currentCart);
+
   return (
     <BrowserRouter>
       <div className="App">
