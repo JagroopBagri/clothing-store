@@ -6,6 +6,9 @@ function Cart(props) {
     const a = cart.findIndex((item) => {
       return item.name === props.title;
     });
+    if (e.target.value < 1) {
+      e.target.value = 1;
+    }
     cart[a].quantity = e.target.value;
     props.cartFunc(cart);
   };
