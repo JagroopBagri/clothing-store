@@ -57,6 +57,7 @@ function App() {
     });
     setCartItems(a);
   };
+
   const currentCart = cartItems.map((item, index) => {
     return (
       <Cart
@@ -67,6 +68,7 @@ function App() {
         key={item + index}
         index={index}
         delete={deleteItem}
+        cartFunc={setCartItems}
       ></Cart>
     );
   });
