@@ -35,9 +35,19 @@ function App() {
   };
   const updateCart = (image, name, price, quantity) => {
     if (quantity > 0) {
-      setCartItems(() => {
-        return [...cartItems, { image, name, price, quantity }];
+      let cartCopy = JSON.parse(JSON.stringify(cartItems));
+      let index = cartItems.findIndex((item) => {
+        return item.name === name;
       });
+      if (index === -1) {
+        setCartItems(() => {
+          return [...cartItems, { image, name, price, quantity }];
+        });
+      } else {
+        cartCopy[index].quantity =
+          Number(cartCopy[index].quantity) + Number(quantity);
+        setCartItems(cartCopy);
+      }
     }
   };
   const deleteItem = (num) => {
