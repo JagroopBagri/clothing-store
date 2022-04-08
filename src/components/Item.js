@@ -16,6 +16,11 @@ function Item(props) {
       setQuantity(Number(twoDigit));
     }
   };
+  const makeEmpty = (e) => {
+    if (Number(e.target.value) === 0) {
+      setQuantity('');
+    }
+  };
   return (
     <div className="item--preview">
       <img className="clothing--item" src={props.image} alt={props.title} />
@@ -37,6 +42,7 @@ function Item(props) {
           max="99"
           value={quantity}
           onChange={changeQuantity}
+          onClick={makeEmpty}
         />
       </div>
     </div>

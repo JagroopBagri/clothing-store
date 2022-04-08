@@ -18,7 +18,11 @@ function Cart(props) {
           Remove
         </p>
       </div>
-      <p className="shopping--cart--quantity"> Quantity: {props.quantity}</p>
+      <input
+        className="shopping--cart--quantity"
+        type="Number"
+        value={props.quantity}
+      ></input>
     </div>
   );
 }
