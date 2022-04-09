@@ -74,7 +74,7 @@ function App() {
   });
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="App">
         <Routes>
           <Route
