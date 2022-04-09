@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Women from './pages/Women';
 import Men from './pages/Men';
 import About from './pages/About';
-import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShoppingCart from './pages/ShoppingCart';
 import Cart from './components/Cart';
 function App() {
@@ -74,7 +74,7 @@ function App() {
   });
 
   return (
-    <HashRouter basename="/clothing-store">
+    <BrowserRouter basename='/clothing-store'>
       <div className="App">
         <Routes>
           <Route
