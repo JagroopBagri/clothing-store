@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Women from './pages/Women';
 import Men from './pages/Men';
 import About from './pages/About';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShoppingCart from './pages/ShoppingCart';
 import Cart from './components/Cart';
 function App() {
@@ -74,11 +74,11 @@ function App() {
   });
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route
-            path="/clothing-store"
+            path="/"
             element={
               <Home
                 cartNotif={displayCartNotif()}
@@ -87,7 +87,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/clothing-store/women"
+            path="/women"
             element={
               <Women
                 cartFunc={updateCart}
@@ -97,7 +97,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/clothing-store/men"
+            path="/men"
             element={
               <Men
                 cartFunc={updateCart}
@@ -107,7 +107,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/clothing-store/about"
+            path="/about"
             element={
               <About
                 cartNotif={displayCartNotif()}
@@ -116,7 +116,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/clothing-store/shopping-cart"
+            path="/shopping-cart"
             element={
               <ShoppingCart
                 cart={currentCart}
@@ -127,7 +127,7 @@ function App() {
           ></Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
