@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import github from '../images/github-logo.png';
 import shoppingCart from '../images/shopping-cart.png';
 function Header(props) {
@@ -33,24 +34,24 @@ function Header(props) {
         </div>
         <ul className="links">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/women">Women</a>
+            <Link to="/women">Women</Link>
           </li>
           <li>
-            <a href="/men">Men</a>
+            <Link to="/men">Men</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </div>
       <div className="empty">
         <div className="cart--container">
-          <a href="/shopping-cart">
+          <Link to="/shopping-cart">
             <img className="cart" src={shoppingCart} alt="cart-icon" />
-          </a>
+          </Link>
           <div className="cart--quantity" style={props.cartNotif}>
             {props.cartQuantity}
           </div>
