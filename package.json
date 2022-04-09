@@ -1,5 +1,4 @@
 {
-  "homepage": "http://jagroopbagri.github.io/clothing-store",
   "name": "clothing-store",
   "version": "0.1.0",
   "private": true,
@@ -39,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://jagroopbagri.github.io/clothing-store"
 }
