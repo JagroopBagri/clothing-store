@@ -74,7 +74,7 @@ function App() {
   });
 
   return (
-    <HashRouter>
+    <HashRouter basename="/clothing-store">
       <div className="App">
         <Routes>
           <Route
