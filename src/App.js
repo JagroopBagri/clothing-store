@@ -74,11 +74,11 @@ function App() {
   });
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <div className="App">
         <Routes>
           <Route
-            path="/"
+            path="/clothing-store"
             element={
               <Home
                 cartNotif={displayCartNotif()}
@@ -87,7 +87,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/women"
+            path="/clothing-store/women"
             element={
               <Women
                 cartFunc={updateCart}
@@ -97,7 +97,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/men"
+            path="/clothing-store/men"
             element={
               <Men
                 cartFunc={updateCart}
@@ -107,7 +107,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/about"
+            path="/clothing-store/about"
             element={
               <About
                 cartNotif={displayCartNotif()}
@@ -116,7 +116,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/shopping-cart"
+            path="/clothing-store/shopping-cart"
             element={
               <ShoppingCart
                 cart={currentCart}
