@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/clothing-store/static/css/main.dc27219a.css",
-    "main.js": "/clothing-store/static/js/main.2e6993ca.js",
+    "main.css": "/clothing-store/static/css/main.953f34ba.css",
+    "main.js": "/clothing-store/static/js/main.c1408b1d.js",
     "static/media/blue-smoke.mp4": "/clothing-store/static/media/blue-smoke.dc2ea849a7bd246e8b6b.mp4",
     "static/media/tropical-shawl2.png": "/clothing-store/static/media/tropical-shawl2.6c90aedf75ee2eda12df.png",
     "static/media/surreal-scarf-blue.png": "/clothing-store/static/media/surreal-scarf-blue.17aa39d2042bed6cfb07.png",
@@ -25,11 +25,11 @@
     "static/media/sage-hoodie.png": "/clothing-store/static/media/sage-hoodie.cb7651685119aa2867f5.png",
     "static/media/shopping-cart.png": "/clothing-store/static/media/shopping-cart.a2eb5a69cea6f5574be8.png",
     "index.html": "/clothing-store/index.html",
-    "main.dc27219a.css.map": "/clothing-store/static/css/main.dc27219a.css.map",
-    "main.2e6993ca.js.map": "/clothing-store/static/js/main.2e6993ca.js.map"
+    "main.953f34ba.css.map": "/clothing-store/static/css/main.953f34ba.css.map",
+    "main.c1408b1d.js.map": "/clothing-store/static/js/main.c1408b1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc27219a.css",
-    "static/js/main.2e6993ca.js"
+    "static/css/main.953f34ba.css",
+    "static/js/main.c1408b1d.js"
   ]
 }
