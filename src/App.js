@@ -74,7 +74,7 @@ function App() {
   });
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Routes>
           <Route
