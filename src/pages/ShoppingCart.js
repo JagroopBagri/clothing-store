@@ -38,7 +38,7 @@ function ShoppingCart(props) {
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </p>
           </div>
-          <div className="pricing--container">
+          <div className="total--container">
             <p className="total">TOTAL</p>
             <p className="total--price">
               $
@@ -48,6 +48,7 @@ function ShoppingCart(props) {
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </p>
           </div>
+          <button className="place--order">Place Order</button>
         </div>
       );
     }

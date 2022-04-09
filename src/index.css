@@ -4,13 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  width: 100%;
-  height: 100%;
-}
+
 body {
+  position: relative;
   background-color: rgb(5, 5, 5);
-  height: 100%;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,17 +17,17 @@ body {
 }
 
 #root {
-  height: 100%;
+  position: absolute;
   width: 100%;
 }
 .App {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 .Home--Page {
-  height: 100%;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -49,6 +46,7 @@ body {
   min-height: 150px;
   max-height: 150px;
   transition: all 0.4s ease-in-out;
+  z-index: 100;
 }
 .header:hover {
   background-color: rgba(5, 5, 5, 0.9);
@@ -164,6 +162,8 @@ h1 {
 
 /* Home Page */
 .season--container {
+  top: 150px;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,6 +210,7 @@ video {
 /* Womens Page */
 
 .women--page {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: rgb(5, 5, 5);
@@ -218,17 +219,16 @@ video {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 120px;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   align-items: center;
 }
-.female--model {
-  height: 50%;
-  width: 100%;
-}
+
 .women--container {
+  position: relative;
+  top: 100px;
   width: 100%;
-  height: 50%;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,26 +242,25 @@ video {
 /* Mens Page */
 
 .men--page {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: rgb(5, 5, 5);
   background-image: url('./images/clothing/male/male-model.jpg');
-  background-size: contain;
+  background-size: 250px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 120px;
-  height: 100%;
+  background-position-y: 50px;
+  min-height: 100vh;
   width: 100%;
   align-items: center;
 }
-.male--model {
-  height: 50%;
-  width: 100%;
-}
+
 .men--container {
+  position: relative;
+  top: 100px;
   width: 100%;
-  height: 50%;
-  min-height: 150px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,7 +280,7 @@ video {
   height: 100%;
   width: 100%;
   min-height: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   align-items: center;
 }
 .about--container {
@@ -321,7 +320,7 @@ video {
   display: flex;
   flex-direction: column;
   background-color: rgb(5, 5, 5);
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   align-items: center;
   gap: 15px;
@@ -345,12 +344,12 @@ video {
   align-items: center;
   width: 85%;
   max-width: 650px;
-  height: 18%;
+  height: 160px;
   border-style: solid;
   padding: 1%;
 }
 .shopping--cart--container img {
-  height: 60%;
+  height: 100px;
   padding: 1px;
 }
 .shopping--cart--info {
@@ -380,7 +379,8 @@ video {
   width: 85%;
   max-width: 650px;
   border-style: solid;
-  padding: 1%;
+  padding: 2%;
+  margin-bottom: 50px;
 }
 .pricing--container {
   display: flex;
@@ -388,8 +388,36 @@ video {
   justify-content: space-between;
   width: 90%;
   height: 40px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+.total--container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.place--order {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
   border-style: solid;
-  border-color: wheat;
+  border-color: rgb(132, 205, 110);
+  border-radius: 10px;
+  background-color: rgb(132, 205, 110);
+  cursor: pointer;
 }
 .price {
   display: flex;
@@ -399,6 +427,7 @@ video {
   border-color: white;
   width: 50%;
 }
+
 /* items component */
 .item--preview--container {
   padding: 5px;
@@ -490,6 +519,14 @@ input {
   max-width: 100%;
 }
 @media only screen and (min-width: 650px) {
+  .women--page {
+    background-size: 650px;
+    background-position-y: -1px;
+  }
+  .men--page {
+    background-size: 350px;
+    background-position-y: 15px;
+  }
   .header {
     height: 30%;
   }
@@ -543,19 +580,11 @@ input {
     background-image: none;
     background-size: auto;
   }
-  .female--model {
-    height: 80%;
-    width: 100%;
-  }
-  .male--model {
-    height: 80%;
-    width: 100%;
-  }
+
   .item--preview--container {
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 200px;
     width: 700px;
-    height: 45%;
+    min-height: 200px;
     top: 90px;
   }
   .item--preview {
@@ -573,10 +602,10 @@ input {
     line-height: 40px;
   }
   .shopping--cart--container {
-    height: 25%;
+    height: 250px;
   }
   .shopping--cart--container img {
-    height: 85%;
+    height: 190px;
   }
   .shopping--cart--info {
     height: 85%;
@@ -585,7 +614,7 @@ input {
 @media only screen and (min-width: 1200px) {
   .item--preview--container {
     width: 90%;
-    height: 50%;
+    min-height: 250px;
     top: 200px;
   }
   .item--preview {
@@ -606,7 +635,7 @@ input {
 @media only screen and (min-width: 2000px) {
   .item--preview--container {
     width: 70%;
-    height: 50%;
+    min-height: 300px;
     top: 200px;
   }
   .item--preview {
@@ -617,7 +646,7 @@ input {
 @media only screen and (min-width: 2800px) {
   .item--preview--container {
     width: 55%;
-    height: 50%;
+    min-height: 400px;
     top: 200px;
   }
   .item--preview {
