@@ -49,7 +49,7 @@ body {
   z-index: 100;
 }
 .header:hover {
-  background-color: rgba(5, 5, 5, 0.9);
+  background-color: rgba(5, 5, 5, 0.95);
 }
 .middle {
   display: flex;
@@ -120,6 +120,7 @@ h1 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  display: none;
 }
 .burger--button {
   width: 25px;
@@ -193,7 +194,31 @@ h1 {
   border-color: rgb(20, 20, 20);
 }
 .cart--container {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+}
+.cart--quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: bold;
+  position: relative;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  background-color: red;
+  width: 22px;
+  height: 22px;
+  top: -13px;
+  right: 6px;
+}
+.cart {
+  width: 28px;
 }
 video {
   height: 100%;
@@ -547,12 +572,12 @@ input {
     font-size: 0.6rem;
     font-weight: bold;
     position: relative;
-    border-color: rgb(5, 5, 5);
+    border-color: transparent;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 50%;
     background-color: red;
-    width: 24px;
+    width: 22px;
     height: 22px;
     top: -13px;
     right: 6px;
