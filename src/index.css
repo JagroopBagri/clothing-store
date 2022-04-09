@@ -81,7 +81,7 @@ li {
   width: 22%;
   font-size: 0.9rem;
 }
-li Link {
+li a {
   cursor: pointer;
   text-decoration: none;
   color: white;
