@@ -28,5 +28,5 @@ The main motivation for this work was to design and deploy a multiple page appli
 Beyond that, other learning outcomes were:
 
 - Design reusable custom components to be used in multiple places using Styled Components;
-- Solidify knowldge and practial use of react hooks and props
+- Solidify knowledge and practical use of react hooks and props
 - Further comprehension of state management and state lifting in React;
